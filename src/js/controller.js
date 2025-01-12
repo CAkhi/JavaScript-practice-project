@@ -57,6 +57,10 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
 const controlServings = function (newServings) {
   model.updateServings(newServings);
   recipeView.update(model.state.recipe);
@@ -108,5 +112,6 @@ const init = function () {
   recipeView.addBookmarksHandler(controlBookmark);
   bookmarkView.addHandlerRender(controlBookmarkOnInitialLoad);
   customRecipeView.uploadFormDataHandler(controlCustomRecipe);
+  newFeature();
 };
 init();
